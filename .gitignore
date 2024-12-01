@@ -1,3 +1,9 @@
+# VS Code
+.vscode
+
+# Cache
+__pycache__
+
 # Data
 data
 
