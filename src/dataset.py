@@ -21,6 +21,9 @@ class CifarDataset(Dataset):
     ))
     self.images = np.concat(self.images)
     self.labels = np.concat(self.labels)
+    # Binary label for Cat (class 3)
+    self.labels = (self.labels == 3).astype(int)
+    self.label_names = {1: "cat", 0: "other"}
 
   def __len__(self):
     return len(self.labels)
