@@ -29,6 +29,6 @@ class CifarDataset(Dataset):
     return len(self.labels)
 
   def __getitem__(self, index):
-    image = self.images[index]
+    image = self.images[index] / 255
     label = self.labels[index]
     return image, label
